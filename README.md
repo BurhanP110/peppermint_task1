@@ -68,11 +68,30 @@ This node acts as the "brain". It subscribes to the `/error` topic from the came
 
 ---
 
+### How would you account for the object going out of frame? How would you recover?
+
+In my implementation, I accounted for the object going out of frame by building a dedicated 'search state' into my control logic.
+
+If the sphere leaves the camera's Field of View (FOV), the Vision Node's contour detection fails. Instead of crashing or doing nothing, I programmed the Vision Node to immediately publish a specific sentinel error value (9999.0) to the /error topic.
+
+My Controller Node constantly monitors this topic. When it receives this 9999.0 value, it knows the robot is 'blind' to the target. To recover, the controller automatically stops all forward linear movement and commands a steady angular velocity (cmd_vel.twist.angular.z = 0.3). This causes the robot to slowly rotate in place, actively scanning its environment until the green sphere comes back into the camera's frame, at which point the standard P-controller seamlessly takes over again.
+
+### How would you figure out that the robot is close to the obstacle and stop? Is there any other data you can use?
+
+To figure out when the robot was close to the obstacle, I decided to use sensor fusion rather than relying solely on the camera.
+
+While I could have used the camera data to estimate distance—for example, by calculating the area of the green contour and stopping when it filled a certain percentage of the screen—that method is highly susceptible to lighting changes and varying object sizes.
+
+Instead, I used the TurtleBot's 2D LiDAR. I programmed the Controller Node to subscribe to the /scan topic and parse the specific array elements corresponding to the front 20 degrees of the robot's view. By isolating the minimum valid distance in this front cone, the robot gains a highly precise measurement of how far away the sphere is. Once that LiDAR distance reading drops to 35 centimeters (0.35 meters), the controller overrides all other commands, sets the velocities to exactly 0.0, and safely halts the robot.
+
+<br><br>
+
 ## Setup and Installation
 
 ### Prerequisites
-* Ubuntu 24.04 / ROS 2 (Jazzy)
-* Gazebo (Harmonic/gz-sim)
+* [Ubuntu 24.04](https://ubuntu.com/download/desktop)
+* [ROS 2 (Jazzy)](https://docs.ros.org/en/jazzy/Installation.html)
+* [Gazebo (Harmonic/gz-sim)](https://gazebosim.org/docs/latest/getstarted/)
 * [TurtleBot3 ROS2 Setup](https://emanual.robotis.com/docs/en/platform/turtlebot3/quick-start/)
 * OpenCV and cv_bridge
 
