@@ -117,4 +117,5 @@ rosdep install --from-paths src --ignore-src -r -y
 # Build and Launch
 colcon build --packages-select peppermint_task1
 source install/setup.bash
+export TURTLEBOT3_MODEL=waffle
 ros2 launch peppermint_task1 task.launch.py
