@@ -10,7 +10,7 @@ https://github.com/user-attachments/assets/a5295881-fdd3-4a65-81c6-d7e312d6aff0
 
 
 <br>
-Video: Turtkebot3 following a green sphere, Final Output
+Video: Turtlebot3 following a green sphere, Final Output
 
 
 ## System Architecture & Approach
