@@ -87,7 +87,7 @@ mkdir -p ~/peppermint_ws/src
 cd ~/peppermint_ws/src
 
 # Clone your repository
-git clone <your_repo_link>
+git clone https://github.com/BurhanP110/peppermint_task1.git
 
 # Move back to workspace root and install dependencies
 cd ..
