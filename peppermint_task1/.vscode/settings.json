@@ -1,0 +1,27 @@
+{
+    "ROS2.distro": "jazzy",
+    "python.autoComplete.extraPaths": [
+        "/home/burhan/Desktop/peppermint_task/install/color_nav/lib/python3.12/site-packages",
+        "/home/burhan/turtlebot3_ws/build/turtlebot3_teleop",
+        "/home/burhan/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.12/site-packages",
+        "/home/burhan/turtlebot3_ws/build/turtlebot3_example",
+        "/home/burhan/turtlebot3_ws/install/turtlebot3_example/lib/python3.12/site-packages",
+        "/home/burhan/turtlebot3_ws/install/turtlebot3_msgs/lib/python3.12/site-packages",
+        "/home/burhan/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.12/site-packages",
+        "/home/burhan/turtlebot3_ws/install/dynamixel_sdk/lib/python3.12/site-packages",
+        "/home/burhan/ros2_workspace/install/my_py_pkg/lib/python3.12/site-packages",
+        "/opt/ros/jazzy/lib/python3.12/site-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/burhan/Desktop/peppermint_task/install/color_nav/lib/python3.12/site-packages",
+        "/home/burhan/turtlebot3_ws/build/turtlebot3_teleop",
+        "/home/burhan/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.12/site-packages",
+        "/home/burhan/turtlebot3_ws/build/turtlebot3_example",
+        "/home/burhan/turtlebot3_ws/install/turtlebot3_example/lib/python3.12/site-packages",
+        "/home/burhan/turtlebot3_ws/install/turtlebot3_msgs/lib/python3.12/site-packages",
+        "/home/burhan/turtlebot3_ws/install/dynamixel_sdk_custom_interfaces/lib/python3.12/site-packages",
+        "/home/burhan/turtlebot3_ws/install/dynamixel_sdk/lib/python3.12/site-packages",
+        "/home/burhan/ros2_workspace/install/my_py_pkg/lib/python3.12/site-packages",
+        "/opt/ros/jazzy/lib/python3.12/site-packages"
+    ]
+}
