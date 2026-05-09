@@ -115,6 +115,6 @@ rosdep update
 rosdep install --from-paths src --ignore-src -r -y
 
 # Build and Launch
-colcon build
+colcon build --packages-select peppermint_task1
 source install/setup.bash
 ros2 launch peppermint_task1 task.launch.py
