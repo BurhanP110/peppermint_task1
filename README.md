@@ -119,3 +119,7 @@ colcon build --packages-select peppermint_task1
 source install/setup.bash
 export TURTLEBOT3_MODEL=waffle
 ros2 launch peppermint_task1 task.launch.py
+```
+<br>
+It will open 2 windows: Gazebo and the Camera View Window
+
