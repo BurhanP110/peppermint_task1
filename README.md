@@ -44,6 +44,16 @@ Fig 3: The HSV 3D Plot
 Axis and Labes(x: Hue, y: Saturation, z: Value)
 <br><br><br>
 
+
+
+<img width="1261" height="391" alt="Screenshot 2026-05-11 at 10 47 42 AM" src="https://github.com/user-attachments/assets/3cc6996c-adf9-4350-99d5-9f6b676ee28c" />
+<br>
+Fig 4: Binary Mask
+<br><br><br>
+<img width="1090" height="399" alt="Screenshot 2026-05-11 at 10 48 01 AM" src="https://github.com/user-attachments/assets/e5c85fb2-ff4e-4c0e-aecc-ec9f1d334363" />
+<br>
+Fig 5: Applied Binary Mask
+<br><br><br>
 Once I got confidence, that this is how the robot is going to break down the task, I got into writing the nodes. 
 
 When I was writing the vision_node, I got stuck on how is ROS transporting such large image data continously and quicly. When I read and researched about it, I got to know, that ROS isn't directly sending the image, but converting into data bytes optimized for transporting such heavy data, and when I want to work on it I will use the Opencv objet (cv2) and perform all the operations like edge detection, contours, blurring, etc. and in future I have to transport the processed image again, i will have to use the ros to cv bridge again (msgs-> images).
