@@ -1,0 +1,49 @@
+<?xml version='1.0'?>
+<sdf version='1.10'>
+  <model name='sphere'>
+    <pose>0 0 0 0 0 0</pose>
+    <link name='sphere_link'>
+      <inertial>
+        <inertia>
+          <ixx>0.1</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.1</iyy>
+          <iyz>0</iyz>
+          <izz>0.1</izz>
+        </inertia>
+        <mass>1</mass>
+        <pose>0 0 0 0 0 0</pose>
+      </inertial>
+      <collision name='sphere_collision'>
+        <geometry>
+          <sphere>
+            <radius>0.5</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <friction>
+            <ode/>
+          </friction>
+          <bounce/>
+          <contact/>
+        </surface>
+      </collision>
+      <visual name='sphere_visual'>
+        <geometry>
+          <sphere>
+            <radius>0.5</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0.0 1.0 0.0 1</ambient>
+          <diffuse>0.0 1.0 0.0 1</diffuse>
+          <specular>0 1 0 1</specular>
+        </material>
+      </visual>
+      <enable_wind>false</enable_wind>
+    </link>
+    <static>false</static>
+    <self_collide>false</self_collide>
+  </model>
+</sdf>
